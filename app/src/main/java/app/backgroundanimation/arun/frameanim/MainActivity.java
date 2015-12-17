@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         view = (ImageView) findViewById(R.id.imageView);
 
         // Setting animation_list.xml as the background of the image view
-        view.setBackgroundResource(R.drawable.frame_animation_list);
+       /* view.setBackgroundResource(R.drawable.frame_animation_list);
 
         // Type casting the Animation drawable
         frameAnimation = (AnimationDrawable) view.getBackground();
@@ -24,5 +24,10 @@ public class MainActivity extends AppCompatActivity {
         //set true if you want to animate only once
         frameAnimation.setOneShot(false);
         frameAnimation.start();
+    */
+        AnimationContainer.FramesSequenceAnimation anim = AnimationContainer.getInstance().createSplashAnim(view);
+        anim.start();
+
+
     }
 }
